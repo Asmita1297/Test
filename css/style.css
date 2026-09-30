@@ -1,0 +1,236 @@
+body {
+    background-color: lightpink;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: white;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Header */
+
+header {
+    background-color: #800020;
+    color: white;
+    padding: 1rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #F7C8D0;
+}
+
+/* Search */
+
+.search-form input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-form button {
+    background-color: #800020;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #A64D60;
+}
+
+/* Main */
+
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Headings */
+
+h1,
+h2 {
+    color: #800020;
+}
+
+h1 {
+    font-size: 2rem;
+    border-bottom: 2px solid #800020;
+    width: fit-content;
+    padding-bottom: 0.3rem;
+}
+
+/* Section Boxes */
+
+.about-container,
+.articles-container,
+.project-container,
+.find-me-container,
+.education-container {
+    background-color: #D98F9A;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(128, 0, 32, 0.3);
+    margin-bottom: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* About Me */
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 12px black;
+    flex-shrink: 0;
+}
+
+.about-text {
+    flex: 1;
+}
+
+/* Contact Form */
+
+input,
+textarea {
+    padding: 0.5rem;
+    border: 1px solid #800020;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #800020;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #A64D60;
+}
+
+/* Education Table */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background-color: #800020;
+    color: white;
+    padding: 0.7rem;
+}
+
+td {
+    padding: 0.7rem;
+    border: 1px solid white;
+}
+
+
+
+.articles-container article {
+    background-color: #F7C8D0;
+    color: #800020;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(128, 0, 32, 0.3);
+}
+
+.articles-container article:last-child {
+    margin-bottom: 0;
+}
+
+.articles-container article h2 {
+    color: #800020;
+    margin-top: 0;
+}
+
+.articles-container article p {
+    color: #800020;
+}
+
+/* Article Links */
+
+
+
+.articles-container article a {
+    color: #800020;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.articles-container article:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 8px 20px rgba(128, 0, 32, 0.45); }
+
+@media (max-width: 768px) {
+.header-container{
+    flex-direction: column;
+}
+nav ul{
+    flex-direction: column;
+}
+.about-container{
+    flex-direction: column;
+}
+}
+@media (min-width: 769px) and (max-width:1024px){
+
+    .header-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 1 rem;
+    }
+nav ul{
+    gap: 1 rem;
+}
+.about-container{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+}
+
+
+
+
+footer {
+    background-color: #800020;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}

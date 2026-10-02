@@ -1,3 +1,15 @@
+/* ==========================================
+   GLOBAL
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: lightpink;
     font-family: 'Segoe UI', Roboto, sans-serif;
@@ -6,69 +18,160 @@ body {
     margin: 0;
 }
 
-/* Header */
+
+/* ==========================================
+   HEADER
+========================================== */
 
 header {
     background-color: #800020;
     color: white;
-    padding: 1rem;
+    padding: 1rem 2rem;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .header-container {
+    max-width: 1300px;
+    margin: auto;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    gap: 1.5rem;
 }
 
-/* Navigation */
+
+/* Logo */
+
+.logo img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* NAVIGATION */
 
 nav ul {
     list-style: none;
+
     display: flex;
-    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 1.3rem;
+
     margin: 0;
     padding: 0;
 }
 
 nav a {
     color: white;
+
     text-decoration: none;
+    font-weight: 500;
+
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: #F7C8D0;
 }
 
-/* Search */
+
+/* ==========================================
+   SEARCH
+========================================== */
+
+.search-form form {
+    display: flex;
+    gap: 0.4rem;
+}
 
 .search-form input {
-    padding: 0.5rem;
+    padding: 0.6rem;
+
     border: none;
     border-radius: 5px;
+
+    min-width: 0;
 }
 
 .search-form button {
     background-color: #800020;
     color: white;
+
     border: 1px solid white;
-    padding: 0.5rem 1rem;
+
+    padding: 0.6rem 1rem;
+
     border-radius: 5px;
+
     cursor: pointer;
+
+    transition: background-color 0.3s ease;
 }
 
 .search-form button:hover {
     background-color: #A64D60;
 }
 
-/* Main */
+
+/* ==========================================
+   MAIN
+========================================== */
 
 main {
     max-width: 1100px;
+
     margin: 2rem auto;
+
     padding: 1rem;
 }
 
-/* Headings */
+section {
+    scroll-margin-top: 120px;
+}
+
+
+/* ==========================================
+   HOME
+========================================== */
+
+#home {
+    text-align: center;
+
+    padding: 3rem 1rem;
+}
+
+#home h1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home p {
+    max-width: 700px;
+
+    margin: 1rem auto;
+
+    color: #800020;
+
+    font-size: 1.1rem;
+}
+
+
+/* ==========================================
+   HEADINGS
+========================================== */
 
 h1,
 h2 {
@@ -77,12 +180,20 @@ h2 {
 
 h1 {
     font-size: 2rem;
+
     border-bottom: 2px solid #800020;
+
     width: fit-content;
+
     padding-bottom: 0.3rem;
+
+    margin-top: 0;
 }
 
-/* Section Boxes */
+
+/* ==========================================
+   SECTION BOXES
+========================================== */
 
 .about-container,
 .articles-container,
@@ -90,28 +201,45 @@ h1 {
 .find-me-container,
 .education-container {
     background-color: #D98F9A;
+
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(128, 0, 32, 0.3);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 12px rgba(128, 0, 32, 0.3);
+
     margin-bottom: 2rem;
+
     width: 100%;
-    box-sizing: border-box;
 }
 
-/* About Me */
+
+/* ==========================================
+   ABOUT ME
+========================================== */
 
 .about-content {
     display: flex;
+
     align-items: center;
-    gap: 2rem;
+
+    gap: 2.5rem;
 }
 
 .about-container img {
-    width: 200px;
-    height: 200px;
+    width: 210px;
+    height: 210px;
+
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 8px 12px black;
+
+    border-radius: 50%;
+
+    border: 5px solid #F7C8D0;
+
+    box-shadow:
+        0 8px 18px rgba(128, 0, 32, 0.35);
+
     flex-shrink: 0;
 }
 
@@ -119,118 +247,623 @@ h1 {
     flex: 1;
 }
 
-/* Contact Form */
+.about-text p {
+    margin-top: 0;
 
-input,
-textarea {
-    padding: 0.5rem;
-    border: 1px solid #800020;
-    border-radius: 5px;
+    font-size: 1.05rem;
+}
+
+
+/* ==========================================
+   SKILLS
+========================================== */
+
+#skills dl {
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+
+    gap: 1rem;
+}
+
+#skills dt {
+    font-weight: bold;
+
+    color: #800020;
+
+    background-color: #F7C8D0;
+
+    padding: 0.8rem;
+
+    border-radius: 6px;
+}
+
+#skills dd {
+    margin: 0;
+
+    padding: 0.8rem;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+/* ==========================================
+   ARTICLES
+========================================== */
+
+.articles-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 1.5rem;
+}
+
+.articles-container > h1 {
+    grid-column: 1 / -1;
+}
+
+.articles-container article {
+    background-color: #F7C8D0;
+
+    color: #800020;
+
+    padding: 1.5rem;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 12px rgba(128, 0, 32, 0.25);
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.articles-container article:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 8px 20px rgba(128, 0, 32, 0.4);
+}
+
+.articles-container article h2 {
+    color: #800020;
+
+    margin-top: 0;
+
+    font-size: 1.35rem;
+}
+
+.articles-container article p {
+    color: #800020;
+
+    flex: 1;
+}
+
+.articles-container article a {
+    color: #800020;
+
+    font-weight: bold;
+
+    text-decoration: underline;
+
+    margin-top: auto;
+}
+
+.articles-container article a:hover {
+    color: #A64D60;
+}
+
+
+/* ==========================================
+   PROJECTS
+========================================== */
+
+.project-container ul {
+    list-style: none;
+
+    padding: 0;
+
+    margin-bottom: 0;
+}
+
+.project-container li {
+    background-color: #F7C8D0;
+
+    color: #800020;
+
+    padding: 1rem;
+
+    margin-bottom: 0.8rem;
+
+    border-radius: 8px;
+
+    border-left:
+        5px solid #800020;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.project-container li:hover {
+    transform: translateX(5px);
+}
+
+
+/* ==========================================
+   CONTACT FORM
+========================================== */
+
+#contact form {
+    max-width: 650px;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+#contact label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 0.4rem;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    width: 100%;
+
+    padding: 0.8rem;
+
+    border:
+        1px solid #800020;
+
+    border-radius: 6px;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline:
+        2px solid #800020;
+
+    border-color: #800020;
+}
+
+#contact textarea {
+    resize: vertical;
+
+    min-height: 120px;
 }
 
 input[type="submit"] {
     background-color: #800020;
+
     color: white;
+
     border: none;
-    padding: 0.6rem 1.5rem;
+
+    padding:
+        0.7rem 1.6rem;
+
     border-radius: 5px;
+
     cursor: pointer;
+
+    font-size: 1rem;
+
+    transition:
+        background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
     background-color: #A64D60;
 }
 
-/* Education Table */
+
+/* ==========================================
+   FIND ME ON
+========================================== */
+
+.social-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.find-me-container a {
+    display: inline-block;
+}
+
+.find-me-container img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.find-me-container img:hover {
+    transform: scale(1.12);
+}
+
+
+/* ==========================================
+   EDUCATION TABLE
+========================================== */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
 
 table {
     border-collapse: collapse;
+
     width: 100%;
 }
 
 th {
     background-color: #800020;
+
     color: white;
-    padding: 0.7rem;
+
+    padding: 0.8rem;
+
+    text-align: center;
 }
 
 td {
-    padding: 0.7rem;
-    border: 1px solid white;
-}
+    padding: 0.8rem;
 
+    border:
+        1px solid white;
 
-
-.articles-container article {
-    background-color: #F7C8D0;
-    color: #800020;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(128, 0, 32, 0.3);
-}
-
-.articles-container article:last-child {
-    margin-bottom: 0;
-}
-
-.articles-container article h2 {
-    color: #800020;
-    margin-top: 0;
-}
-
-.articles-container article p {
-    color: #800020;
-}
-
-/* Article Links */
-
-
-
-.articles-container article a {
-    color: #800020;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.articles-container article:hover { 
-    transform: translateY(-8px); 
-    box-shadow: 0 8px 20px rgba(128, 0, 32, 0.45); }
-
-@media (max-width: 768px) {
-.header-container{
-    flex-direction: column;
-}
-nav ul{
-    flex-direction: column;
-}
-.about-container{
-    flex-direction: column;
-}
-}
-@media (min-width: 769px) and (max-width:1024px){
-
-    .header-container{
-        flex-direction: column;
-        align-items: center;
-        gap: 1 rem;
-    }
-nav ul{
-    gap: 1 rem;
-}
-.about-container{
-    flex-direction: column;
-    align-items: center;
     text-align: center;
 }
+
+tbody tr:hover {
+    background-color:
+        rgba(247, 200, 208, 0.3);
 }
 
 
-
+/* ==========================================
+   FOOTER
+========================================== */
 
 footer {
     background-color: #800020;
+
     color: white;
+
     text-align: center;
+
     padding: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* ==========================================
+   TABLET / IPAD
+   769px - 1024px
+========================================== */
+
+@media
+(min-width: 769px)
+and
+(max-width: 1024px) {
+
+    header {
+        padding: 1rem;
+    }
+
+    .header-container {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 1rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    main {
+        margin-top: 1rem;
+
+        padding: 1.5rem;
+    }
+
+    .about-content {
+        gap: 1.5rem;
+    }
+
+    .articles-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==========================================
+   PHONE
+   768px AND BELOW
+========================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        position: static;
+
+        padding: 1rem;
+    }
+
+
+    /* Header */
+
+    .header-container {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 1rem;
+    }
+
+
+    /* Navigation */
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: row;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap:
+            0.7rem 1rem;
+    }
+
+    nav a {
+        font-size: 0.95rem;
+    }
+
+
+    /* Search */
+
+    .search-form {
+        width: 100%;
+    }
+
+    .search-form form {
+        width: 100%;
+    }
+
+    .search-form input {
+        flex: 1;
+
+        width: 100%;
+    }
+
+
+    /* Main */
+
+    main {
+        width: 100%;
+
+        margin: 1rem auto;
+
+        padding: 0.8rem;
+    }
+
+
+    /* Home */
+
+    #home {
+        padding:
+            2rem 0.5rem;
+    }
+
+
+    /* Headings */
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+
+    /* Containers */
+
+    .about-container,
+    .articles-container,
+    .project-container,
+    .find-me-container,
+    .education-container {
+        padding: 1.3rem;
+    }
+
+
+    /* About Me */
+
+    .about-content {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 1.3rem;
+    }
+
+    .about-container img {
+        width: 170px;
+
+        height: 170px;
+    }
+
+
+    /* Skills */
+
+    #skills dl {
+        grid-template-columns: 1fr;
+
+        gap: 0.5rem;
+    }
+
+    #skills dd {
+        margin-bottom: 0.7rem;
+    }
+
+
+    /* Articles */
+
+    .articles-container {
+        grid-template-columns: 1fr;
+    }
+
+    .articles-container > h1 {
+        grid-column: auto;
+    }
+
+    .articles-container article:hover {
+        transform: none;
+    }
+
+
+    /* Contact */
+
+    #contact input,
+    #contact textarea {
+        font-size: 16px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+
+        min-height: 44px;
+    }
+
+
+    /* Social */
+
+    .social-links {
+        flex-wrap: wrap;
+    }
+
+
+    /* Education */
+
+    table {
+        min-width: 600px;
+    }
+
+}
+
+
+
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 0.95rem;
+    }
+
+
+    /* Navigation */
+
+    nav ul {
+        gap:
+            0.5rem 0.8rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+
+    /* Search */
+
+    .search-form form {
+        flex-direction: column;
+    }
+
+    .search-form button {
+        width: 100%;
+    }
+
+
+    /* Heading */
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+
+    /* Containers */
+
+    .about-container,
+    .articles-container,
+    .project-container,
+    .find-me-container,
+    .education-container {
+        padding: 1rem;
+
+        border-radius: 8px;
+    }
+
+
+    /* About */
+
+    .about-container img {
+        width: 150px;
+
+        height: 150px;
+    }
+
+
+    /* Articles */
+
+    .articles-container article {
+        padding: 1.2rem;
+    }
+
+    .articles-container article h2 {
+        font-size: 1.2rem;
+    }
+
+
+    /* Social icons */
+
+    .find-me-container img {
+        width: 45px;
+
+        height: 45px;
+    }
+
 }

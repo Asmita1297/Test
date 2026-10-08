@@ -1,28 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="css/style.css">
-
     <title>Asmita Khatri | Personal Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
-
 <body>
 
-    <!-- ================= HEADER ================= -->
-
+    <!-- HEADER -->
     <header>
         <div class="header-container">
-
-            <!-- Logo -->
             <div class="logo">
                 <img src="images/logo.png" alt="Asmita Khatri Logo">
             </div>
 
-            <!-- Navigation -->
             <div class="nav-bar">
                 <nav>
                     <ul>
@@ -38,402 +32,248 @@
                 </nav>
             </div>
 
-            <!-- Search -->
             <div class="search-form">
-                <form>
-                    <input
-                        type="search"
-                        name="search"
-                        placeholder="Search"
-                        aria-label="Search website"
-                    >
-
-                    <button type="submit">
-                        Search
-                    </button>
+                <form id="search-form">
+                    <input type="search" name="search"
+                           id="search-input"
+                           placeholder="Search"
+                           aria-label="Search website">
+                    <button type="submit">Search</button>
                 </form>
             </div>
-
         </div>
     </header>
 
-
-    <!-- ================= MAIN ================= -->
-
     <main>
 
-        <!-- ================= HOME ================= -->
-
+        <!-- HOME -->
         <section id="home">
-
             <h1>Welcome to My Web Page</h1>
-
             <p>
-                Welcome to my personal website. This website contains information
-                about me, my skills, projects, education, and contact details.
+                Welcome to my personal website. This website contains
+                information about me, my skills, projects, education,
+                and contact details.
             </p>
-
         </section>
 
+        <!-- IMAGE SLIDER -->
+        <section id="gallery">
+            <h1>Image Gallery</h1>
 
-        <!-- ================= ABOUT ME ================= -->
+            <div class="slider" aria-label="Image gallery">
+                <div class="slider-track">
+                    <div class="slide">
+                        <img src="images/images1.jpg" alt="Image 1">
+                    </div>
+                    <div class="slide">
+                        <img src="images/images2.jpg" alt="Image 2">
+                    </div>
+                    <div class="slide">
+                        <img src="images/images3.jpg" alt="Image 3">
+                    </div>
+                    <div class="slide">
+                        <img src="images/images4.jpg" alt="Image 4">
+                    </div>
+                </div>
 
+                <button class="slider-btn prev"
+                        type="button"
+                        aria-label="Previous image">&#10094;</button>
+
+                <button class="slider-btn next"
+                        type="button"
+                        aria-label="Next image">&#10095;</button>
+
+                <div class="slider-dots"></div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
         <section id="about">
-
             <div class="about-container">
-
                 <h1>About Me</h1>
 
                 <div class="about-content">
-
-                    <img
-                        src="images/profile.jpeg"
-                        alt="Profile photo of Asmita Khatri"
-                    >
+                    <img src="images/profile.jpeg"
+                         alt="Profile photo of Asmita Khatri">
 
                     <div class="about-text">
-
                         <p>
-                            I am a curious and motivated student with an interest in
-                            technology, creativity, and learning new skills. I enjoy
-                            exploring different areas of computer science, especially
-                            web development, artificial intelligence, and software
-                            development.
+                            I am a curious and motivated student with an
+                            interest in technology, creativity, and learning
+                            new skills. I enjoy exploring different areas of
+                            computer science, especially web development,
+                            artificial intelligence, and software development.
                         </p>
 
                         <p>
-                            Outside of academics, I enjoy spending time with friends,
-                            discovering new things, and working on my personal growth.
+                            Outside of academics, I enjoy spending time with
+                            friends, discovering new things, and working on
+                            my personal growth.
                         </p>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- ================= SKILLS ================= -->
-
+        <!-- SKILLS -->
         <section id="skills">
-
             <div class="about-container">
-
                 <h1>My Skills</h1>
 
                 <dl>
-
                     <dt>Programming Language</dt>
-
-                    <dd>
-                        Java, Python and HTML
-                    </dd>
-
+                    <dd>Java, Python and HTML</dd>
 
                     <dt>Database</dt>
-
-                    <dd>
-                        MySQL, MongoDB, Oracle
-                    </dd>
-
+                    <dd>MySQL, MongoDB, Oracle</dd>
 
                     <dt>Tools</dt>
-
                     <dd>
-                        MS Word, PowerPoint, Excel, Visual Studio Code, IntelliJ
+                        MS Word, PowerPoint, Excel,
+                        Visual Studio Code, IntelliJ
                     </dd>
-
                 </dl>
-
             </div>
-
         </section>
 
-
-        <!-- ================= ARTICLES ================= -->
-
+        <!-- ARTICLES -->
         <section id="articles">
-
             <div class="articles-container">
-
                 <h1>Articles</h1>
 
-
-                <!-- Article 1 -->
-
                 <article>
-
                     <h2>The Importance of Technology</h2>
-
                     <p>
-                        Technology has become an important part of our daily lives.
-                        It helps us communicate, study, work, and access information
-                        easily. Students can use technology to learn new skills,
-                        explore different subjects, and work on creative projects.
-                        With the development of artificial intelligence and modern
-                        software, technology continues to create new opportunities.
+                        Technology has become an important part of our daily
+                        lives. It helps us communicate, study, work, and
+                        access information easily. Students can use technology
+                        to learn new skills, explore different subjects, and
+                        work on creative projects. With the development of
+                        artificial intelligence and modern software,
+                        technology continues to create new opportunities.
                     </p>
-
-                    <a
-                        href="https://github.com/Asmita1297/Test.git"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <a href="https://github.com/Asmita1297/Test.git"
+                       target="_blank" rel="noopener noreferrer">
                         Click here
                     </a>
-
                 </article>
 
-
-                <!-- Article 2 -->
-
                 <article>
-
                     <h2>Learning Web Development</h2>
-
                     <p>
-                        Web development is an interesting field that allows people
-                        to create websites and web applications. HTML is used to
-                        create the structure of a webpage, while CSS is used for
-                        styling and JavaScript adds functionality. Learning these
-                        technologies through practice and small projects can help
-                        students improve their technical skills and creativity.
+                        Web development is an interesting field that allows
+                        people to create websites and web applications.
+                        HTML is used to create the structure of a webpage,
+                        while CSS is used for styling and JavaScript adds
+                        functionality. Learning these technologies through
+                        practice and small projects can help students
+                        improve their technical skills and creativity.
                     </p>
-
-                    <a
-                        href="https://github.com/Asmita1297/Test.git"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <a href="https://github.com/Asmita1297/Test.git"
+                       target="_blank" rel="noopener noreferrer">
                         Click here
                     </a>
-
                 </article>
-
-
-                <!-- Article 3 -->
 
                 <article>
-
                     <h2>Importance of Personal Growth</h2>
-
                     <p>
-                        Personal growth is a continuous process of improving our
-                        knowledge, skills, confidence, and habits. Students can
-                        develop themselves by setting goals, learning from mistakes,
-                        managing their time, and trying new experiences. Good
-                        communication, teamwork, and a positive attitude can also
-                        help students become more prepared for their future careers.
+                        Personal growth is a continuous process of improving
+                        our knowledge, skills, confidence, and habits.
+                        Students can develop themselves by setting goals,
+                        learning from mistakes, managing their time, and
+                        trying new experiences. Good communication, teamwork,
+                        and a positive attitude can also help students become
+                        more prepared for their future careers.
                     </p>
-
-                    <a
-                        href="https://github.com/Asmita1297/Test.git"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <a href="https://github.com/Asmita1297/Test.git"
+                       target="_blank" rel="noopener noreferrer">
                         Click here
                     </a>
-
                 </article>
-
             </div>
-
         </section>
 
-
-        <!-- ================= PROJECTS ================= -->
-
+        <!-- PROJECTS -->
         <section id="projects">
-
             <div class="project-container">
-
                 <h1>My Projects</h1>
-
                 <ul>
-
-                    <li>
-                        Personal Portfolio Website
-                    </li>
-
-                    <li>
-                        Web Development Projects
-                    </li>
-
-                    <li>
-                        Data Structure and Algorithm Projects
-                    </li>
-
+                    <li>Personal Portfolio Website</li>
+                    <li>Web Development Projects</li>
+                    <li>Data Structure and Algorithm Projects</li>
                 </ul>
-
             </div>
-
         </section>
 
-
-        <!-- ================= CONTACT ================= -->
-
+        <!-- CONTACT -->
         <section id="contact">
-
             <div class="about-container">
-
                 <h1>Contact Me</h1>
 
-                <form>
-
-                    <!-- Name -->
-
+                <form id="contact-form">
                     <div class="form-group">
-
-                        <label for="name">
-                            Name:
-                        </label>
-
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            autocomplete="name"
-                            placeholder="Enter your name"
-                            required
-                        >
-
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name"
+                               autocomplete="name"
+                               placeholder="Enter your name" required>
                     </div>
 
-
-                    <!-- Email -->
-
                     <div class="form-group">
-
-                        <label for="email">
-                            Mail:
-                        </label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            autocomplete="email"
-                            placeholder="Enter your email"
-                            required
-                        >
-
+                        <label for="email">Mail:</label>
+                        <input type="email" id="email" name="email"
+                               autocomplete="email"
+                               placeholder="Enter your email" required>
                     </div>
 
-
-                    <!-- Message -->
-
                     <div class="form-group">
-
-                        <label for="message">
-                            Message:
-                        </label>
-
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows="5"
-                            placeholder="Write your message"
-                            required
-                        ></textarea>
-
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5"
+                                  placeholder="Write your message"
+                                  required></textarea>
                     </div>
 
-
-                    <!-- Submit -->
-
-                    <input
-                        type="submit"
-                        value="Submit"
-                    >
-
+                    <input type="submit" value="Submit">
+                    <p id="form-status" role="status"></p>
                 </form>
-
             </div>
-
         </section>
 
-
-        <!-- ================= FIND ME ON ================= -->
-
+        <!-- FIND ME ON -->
         <section id="find-me-on">
-
             <div class="find-me-container">
-
                 <h1>Find Me On</h1>
 
                 <div class="social-links">
-
-                    <!-- Instagram -->
-
-                    <a
-                        href="https://www.instagram.com/user.radiohead67/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Instagram"
-                    >
-
-                        <img
-                            src="images/insta.avif"
-                            alt="Instagram"
-                        >
-
+                    <a href="https://www.instagram.com/user.radiohead67/"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="Instagram">
+                        <img src="images/insta.avif" alt="Instagram">
                     </a>
 
-
-                    <!-- Email -->
-
-                    <a
-                        href="mailto:example@email.com"
-                        aria-label="Email"
-                    >
-
-                        <img
-                            src="images/mail.png"
-                            alt="Email"
-                        >
-
+                    <a href="mailto:example@email.com"
+                       aria-label="Email">
+                        <img src="images/mail.png" alt="Email">
                     </a>
 
-
-                    <!-- WhatsApp -->
-
-                    <a
-                        href="https://web.whatsapp.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="WhatsApp"
-                    >
-
-                        <img
-                            src="images/whtsapp.jpg"
-                            alt="WhatsApp"
-                        >
-
+                    <a href="https://web.whatsapp.com/"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="WhatsApp">
+                        <img src="images/whtsapp.jpg" alt="WhatsApp">
                     </a>
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- ================= EDUCATION ================= -->
-
+        <!-- EDUCATION -->
         <section id="education">
-
             <div class="education-container">
-
                 <h1>Education</h1>
 
                 <div class="table-wrapper">
-
                     <table>
-
                         <thead>
-
                             <tr>
                                 <th>S.No.</th>
                                 <th>Level</th>
@@ -441,12 +281,9 @@
                                 <th>GPA</th>
                                 <th>Grade</th>
                             </tr>
-
                         </thead>
 
-
                         <tbody>
-
                             <tr>
                                 <td>1</td>
                                 <td>Secondary Level</td>
@@ -454,8 +291,6 @@
                                 <td>3.45</td>
                                 <td>A</td>
                             </tr>
-
-
                             <tr>
                                 <td>2</td>
                                 <td>Secondary Level</td>
@@ -463,8 +298,6 @@
                                 <td>3.38</td>
                                 <td>A</td>
                             </tr>
-
-
                             <tr>
                                 <td>3</td>
                                 <td>Bachelor's Level</td>
@@ -472,30 +305,17 @@
                                 <td>Ongoing</td>
                                 <td>B</td>
                             </tr>
-
                         </tbody>
-
                     </table>
-
                 </div>
-
             </div>
-
         </section>
 
     </main>
 
-
-    <!-- ================= FOOTER ================= -->
-
     <footer>
-
-        <p>
-            &copy; All Rights Reserved 2026.
-        </p>
-
+        <p>&copy; All Rights Reserved 2026.</p>
     </footer>
 
 </body>
-
 </html>
